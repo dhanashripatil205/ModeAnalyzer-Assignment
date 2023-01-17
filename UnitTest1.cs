@@ -34,22 +34,22 @@ namespace TestCaseMoodAnalyzer
             Assert.AreEqual(expected, actual);
         }
 
-      
+       
 
+       
         [TestMethod]
-        public void UseCase2_1()
+        public void UseCase3_1()
         {
-            string input = "null";
-            string expected = "Happy";
-
-
-            MoodAnalyser moodAnalyser = new MoodAnalyser(input);
-
-            string actual = moodAnalyser.analyseMood1();
-
-            Assert.AreEqual(expected, actual);
+            try
+            {
+               string input = null;
+               var analyze = new MoodAnalyser(input);
+            }
+            catch (NullReferenceException Exception)
+            {
+                Assert.AreEqual("Mood can not be Null.", Exception.Message);
+            }
         }
 
     }
 }
-

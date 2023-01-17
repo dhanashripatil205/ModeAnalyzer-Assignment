@@ -9,10 +9,20 @@ namespace ModeAnalyzerAssignment
 {
     public class MoodAnalyzer
     {
-        public static string analyseMood(string message)
+        public string analyseMood(string message)
         {
-            
-            return message;
+            if (message == "I am in Sad Mood")
+            {
+                message = "SAD";
+                return message;
+
+            }
+            else
+            {
+                message = "HAPPY";
+                return message;
+            }
         }
+
     }
 }

@@ -33,5 +33,21 @@ namespace TestCaseMoodAnalyzer
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Refactor1_1()
+        {
+            string input = "I am in Sad Mood";
+            string expected = "SAD";
+
+
+            MoodAnalyser moodAnalyser = new MoodAnalyser();
+
+            string actual = moodAnalyser.msg;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+       
     }
 }

@@ -1,23 +1,16 @@
 namespace ModeAnalyzerAssignment
 {
-     public class Program
-     {
+    public class Program
+    {
         public static void Main(string[] args)
         {
-            string message;
-            Random random= new Random();
-            int mood = random.Next(2);
+            string message = "I am in Sad Mood";
+            string message1 = "I am in Any Mood";
+            MoodAnalyzer moodAnalyzer1 = new MoodAnalyzer();
+            moodAnalyzer1.analyseMood(message);
 
-            if (mood == 1) 
-            {
-                 message = "Happy";
-            }
-            else
-            {
-                 message = "Sad";
-
-            }
-            Console.WriteLine(MoodAnalyzer.analyseMood(message));
         }
-     }
+    }
 }
+
+

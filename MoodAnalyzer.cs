@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
@@ -25,4 +26,28 @@ namespace ModeAnalyzerAssignment
         }
 
     }
+    public class MoodAnalyser
+    {
+
+        public string msg;
+        public MoodAnalyser()
+        {
+            this.msg = "SAD";
+        }
+        public MoodAnalyser(string msg1)
+        {
+           this.msg = msg1;
+            
+        }
+        
+        public string analyseMood1()
+        {
+            MoodAnalyser obja = new MoodAnalyser();
+            return obja.msg;
+            
+        }
+
+    }
+
 }
+

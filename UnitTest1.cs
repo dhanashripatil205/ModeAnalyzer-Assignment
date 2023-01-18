@@ -10,16 +10,16 @@ namespace TestCaseMoodAnalyzer
     {
 
         [TestMethod]
-        public void UseCase5_2()
+        public void UseCase5_3()
         {
             try
             {
-                
-                object returned = Mood_Aanalyzer_Factory.CreateMoodAnalyze_Parameter_Constructor("ModeAnalyzerAssignment.MoodAnaler", "MoodAnalyser");
+
+                object returned = Mood_Aanalyzer_Factory.CreateMoodAnalyze_Parameter_Constructor("ModeAnalyzerAssignment.MoodAnalyser", "MoodAnar");
             }
-            catch(MoodAnalyzerNullException Exception)
+            catch (MoodAnalyzerNullException Exception)
             {
-                Assert.AreEqual("Class not found",Exception.Message);
+                Assert.AreEqual("Constructor not found", Exception.Message);
             }
         }
      

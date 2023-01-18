@@ -8,15 +8,17 @@ namespace TestCaseMoodAnalyzer
  [TestClass]
     public class UnitTest1
     {
-
-        [TestMethod]
-        public void UseCase4_1()
+          [TestMethod]
+        public void UseCase4_2()
         {
-            object expected = new MoodAnalyzer();
-            object returned = Mood_Aanalyzer_Factory.CreateMoodAnalyze("ModeAnalyzerAssignment.MoodAnalyzer", "MoodAnalyzer");
-            expected.Equals(returned);
+            try
+            {
+                object returned = Mood_Aanalyzer_Factory.CreateMoodAnalyze("ModeAnalyzerAssignment.Mood", "Mood");
+            }
+            catch (MoodAnalyzerNullException Exception)
+            {
+                Assert.AreEqual("Class not found", Exception.Message);
+            }
         }
-      
-        
     }
 }
